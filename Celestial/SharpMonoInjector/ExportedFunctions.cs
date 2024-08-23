@@ -1,6 +1,17 @@
-﻿namespace SharpMonoInjector;
+﻿using System;
 
-public class ExportedFunctions
+namespace SharpMonoInjector
 {
-    
+    public struct ExportedFunction
+    {
+        public string Name;
+
+        public IntPtr Address;
+
+        public ExportedFunction(string name, IntPtr address)
+        {
+            Name = name;
+            Address = address;
+        }
+    }
 }
